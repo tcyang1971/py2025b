@@ -17,7 +17,9 @@ def today():
     now = datetime.now()
     return render_template("today.html", datetime = str(now))
 
-
+@app.route("/me")
+def me():
+    return render_template("about.html")
 
 if __name__ == "__main__":
     app.run()
